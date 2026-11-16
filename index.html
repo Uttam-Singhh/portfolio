@@ -1,82 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
- <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="the personal website of Uttam Singh" />
-
-  <title>Uttam Singh</title>
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Uttam is a polymath based in New York City building in crypto, AI, and payments.">
+  <meta name="theme-color" content="#050a18">
   <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
 
-  <link rel="stylesheet" href="styles.css" />
- </head>
-
- <body>
-  <div id="preamble">
-   <a target="_blank" ><h1 class="title">Utttam Singh</h1></a>
-
-   <h2 class="subtitle" style="margin-bottom: 35px;">
-    <a target="_blank" href="https://twitter.com/uttam_singhk">twitter</a>
-    | <a target="_blank" href="https://www.linkedin.com/in/uttam-singh/">linkedin</a>
-    | <a target="_blank" href="https://linktr.ee/uttam_singhk">linktree</a>
-    | <a target="_blank" href="https://www.youtube.com/channel/UCKbY9fHz4y_tt2lWSe9bUJw">youtube</a>
-    | <a target="_blank" href="https://github.com/Uttam-Singhh">github</a>
-    | <a target="_blank" href="https://t.me/+7eI36yT2UclkNjE1">telegram</a>
-    | <a href="mailto:uttamkhanduja@yahoo.in">email</a>
-   </h2>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-count" id="loaderCount">000</span>
+      <span class="loader-bar"><i id="loaderBar"></i></span>
+    </div>
   </div>
 
-  <div>
-    <p style="margin-bottom: 40px; text-align: center;">DevRel Engineer <a target="_blank" href="https://twitter.com/FlareNetworks">flare network</a>, Researcher, Blockchain Educator</p>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
 
-   <div>
-    <h2>Experience</h2>
-    <div>
-     <ul>
-      <li><a target="_blank" ><code>Developer Relations at Flare Network</code></a></li>
-      <li><a target="_blank" ><code>Blockchain Research Fellowship at University De Montreal</code></a></li>
-      <li><a target="_blank" ><code>Blockchain Engineer & DevRel at Polygon(Matic)</code></li>
-      <li><a target="_blank" ><code>Lead DevRel Crypto Capable </code></a></li> 
-      <li><a target="_blank" ><code>Ecosystem Advocate at Meson Network</code></a></li>
-      <li><a target="_blank" ><code>Community Builder Binance India</code></a></li>
-      <li><a target="_blank" ><code>Technical Writer at Blockchain Council</code></a></li>
-      <li><a target="_blank" ><code>MLH Fellowship</code></a></li>
-     </ul>
+  <header class="nav">
+    <div class="pill">
+      <a class="mark" href="#top" aria-label="Back to top"><span id="mark">U</span></a>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#talks">Talks</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="status" href="#contact"><i></i><span id="status"></span></a>
     </div>
+  </header>
 
-    <h2>Code, Content, Community, Talks, Open Source</h2>
-    <div>
-     <ul>
-       <li><a target="_blank" href="https://youtu.be/1pE261Tbjcc?si=bChlQVckVvsYwCeQ">CrashCourse on Account Abstraction ERC 4337</a></li>
-       <li><a target="_blank" href="https://youtu.be/hVWLOdruHhw?si=R7VZTMgbWF5sjK4e">Full Course on MEV & Flashbot</a></li>
-       <li><a target="_blank" href="https://youtu.be/8p7RKYJ9AF0?si=d_c0BdRufsR0f3H4">Crash Course on EVM</a>
-       <li><a target="_blank" href="https://x.com/FlareNetworks/status/1736202071274131691">Foundry Guide for FTSO oracle</a></li>
-       <li><a target="_blank" href="https://youtu.be/hcy1UwBdJCs?si=5gNACnCXoOsZhZed">CrashCourse on Flashloans</a></li>
-       <li><a target="_blank" href="https://x.com/uttam_singhk/status/1777967695952236880">Understanding CREATE, CREATE2, CREATE3</a></li>
-       <li><a target="_blank" href="https://x.com/uttam_singhk/status/1746795167624073658">Appreciated by Hasu from Flashbots</a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/posts/uttam-singh_nyc-timessquare-newyork-activity-7053264464799772672-hJdl">Speaker at NFT NYC</a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7075355263305736195">Speaker at ETH CC</a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/posts/uttam-singh_web3-blockchain-crypto-activity-7173606626359132160-ZK9F">Speaker at ETH Oxford</a></li>
-      <li><a target="_blank" href="">Took Sessions in Multiple Universities</a></li>
-      <li><a target="_blank" href="https://github.com/Uttam-Singhh/Advance-Faucet">Project - Advance Faucet</a></li>
-      <li><a target="_blank" href="https://github.com/Uttam-Singhh/ETHEmpower">Project - ETH Empower</a></li>
-      <li><a target="_blank" href="https://github.com/yorku-ease/blockcompass">Project - Blockcompass</a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/in/uttam-singh/details/certifications/">Erigon Contributer</a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/in/uttam-singh/details/certifications/">Organiser 30 Days of Web3 Open Source</a></li>
-      <li><a target="_blank" href="https://t.me/+7eI36yT2UclkNjE1">Telegram community with 2K active Devs</a></li>
-      <li><a target="_blank" href="https://github.com/Uttam-Singhh/Damn-Vulnerable-DeFi-Solutions-Foundry-Solidity">Damn Vulnerable DeFi Solutions Foundry Solidity</a></li>
-     </ul>
-    </div>
-   </div>
-  </div>
+  <aside class="hud hud-l" aria-hidden="true"><span id="clock">00:00:00</span></aside>
+  <aside class="hud hud-r" aria-hidden="true"><span><span class="k">scroll</span>: <span id="sunrise">0.00</span></span></aside>
 
- <hr>
-    <div id="footer">
-        <p class="footer"><i>This website was modified from
-                <a target="_blank" href="https://github.com/transmissions11/transmissions11.github.io" />t11s' fork</a> of the
-                <a target="_blank" href="https://github.com/dapphub/dapp-tools" />dapptools</a> website</i></p>
-        <br />
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-inner" id="heroInner">
+        <div class="faces" id="faces"></div>
+        <h1 class="name" id="name"></h1>
+        <p class="role"><span id="role"></span><i class="caret"></i></p>
+        <p class="tagline" id="tagline"></p>
+        <div class="actions">
+          <a class="btn solid" href="#work">View work <span>→</span></a>
+          <a class="btn ghost" href="#contact">Say hello</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about"><i></i>Scroll</a>
+    </section>
+
+    <section class="about" id="about">
+      <header class="label reveal"><b>01</b><span>About</span></header>
+      <p class="statement reveal" id="statement"></p>
+      <dl class="facts reveal" id="facts"></dl>
+    </section>
+
+    <section class="work" id="work">
+      <header class="label reveal"><b>02</b><span>Selected work</span></header>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="talks" id="talks">
+      <header class="label reveal"><b>03</b><span>Talks</span></header>
+      <div class="rail" id="rail"></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <header class="label reveal"><b>04</b><span>Contact</span></header>
+      <h2 class="headline reveal" id="headline"></h2>
+      <a class="cta btn solid reveal" id="email" href="#"><span></span><i>→</i></a>
+      <ul class="socials reveal" id="socials"></ul>
+      <footer><span id="copyright"></span><span>Made with optimism</span></footer>
+    </section>
+  </main>
+
+  <script src="js/content.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
